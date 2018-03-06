@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EB53F7E76371FD5DBFB0C34 /* libPods-RACTestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF67DC5482E36626F1EE6285 /* libPods-RACTestDemo.a */; };
 		DEBC7DE92049368C0021CA46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBC7DE82049368C0021CA46 /* AppDelegate.m */; };
 		DEBC7DEC2049368C0021CA46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBC7DEB2049368C0021CA46 /* ViewController.m */; };
 		DEBC7DEF2049368C0021CA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC7DED2049368C0021CA46 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 		DEBC7DF32049368C0021CA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEBC7DF52049368C0021CA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEBC7DF62049368C0021CA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ECF3EE472D94E652B313C45F /* Pods-RACTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACTestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACTestDemo/Pods-RACTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		ED3AB26619ED9A64C9D94E86 /* Pods-RACTestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACTestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACTestDemo/Pods-RACTestDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FF67DC5482E36626F1EE6285 /* libPods-RACTestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACTestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB53F7E76371FD5DBFB0C34 /* libPods-RACTestDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE40AEE45F86CBA0E31567B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF67DC5482E36626F1EE6285 /* libPods-RACTestDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		413E465408F78B2C645AB29F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECF3EE472D94E652B313C45F /* Pods-RACTestDemo.debug.xcconfig */,
+				ED3AB26619ED9A64C9D94E86 /* Pods-RACTestDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DEBC7DDB2049368C0021CA46 = {
 			isa = PBXGroup;
 			children = (
 				DEBC7DE62049368C0021CA46 /* RACTestDemo */,
 				DEBC7DE52049368C0021CA46 /* Products */,
+				413E465408F78B2C645AB29F /* Pods */,
+				2BE40AEE45F86CBA0E31567B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEBC7DFA2049368C0021CA46 /* Build configuration list for PBXNativeTarget "RACTestDemo" */;
 			buildPhases = (
+				567EF143BB828C00E1EBBDD6 /* [CP] Check Pods Manifest.lock */,
 				DEBC7DE02049368C0021CA46 /* Sources */,
 				DEBC7DE12049368C0021CA46 /* Frameworks */,
 				DEBC7DE22049368C0021CA46 /* Resources */,
+				9975E2A546AAD673DA84CA13 /* [CP] Embed Pods Frameworks */,
+				826ACB70ECC6A0166BA1826F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		567EF143BB828C00E1EBBDD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		826ACB70ECC6A0166BA1826F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACTestDemo/Pods-RACTestDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9975E2A546AAD673DA84CA13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RACTestDemo/Pods-RACTestDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEBC7DE02049368C0021CA46 /* Sources */ = {
@@ -276,6 +351,7 @@
 		};
 		DEBC7DFB2049368C0021CA46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECF3EE472D94E652B313C45F /* Pods-RACTestDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +366,7 @@
 		};
 		DEBC7DFC2049368C0021CA46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3AB26619ED9A64C9D94E86 /* Pods-RACTestDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
